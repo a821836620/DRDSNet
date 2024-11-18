@@ -605,7 +605,7 @@ class MedSegDiff(Module):
 
         self.model = model if isinstance(model, Unet) else model.module
 
-        self.input_img_channels = self.model.input_img_channels
+        self.a = self.model.input_img_channels
         self.mask_channels = self.model.mask_channels
         self.self_condition = self.model.self_condition
         self.image_size = self.model.image_size
